@@ -1,0 +1,14 @@
+{{#partial "contenido"}}
+  <link rel="stylesheet" type="text/css" href="/vincular.css">
+<br>
+ <h2 id="tituloMiembros">Mis Miembros:</h2>
+ <div id="miembrosDiv">
+  <h5>Nombre, Apellido y Documento: </h5>
+{{#each miembros}}
+ <li> {{nombre}} | {{apellido}} | {{nroDocumento}}  </li>
+{{/each}}
+</div>
+
+{{/partial}}
+{{>layout.html.hbs}}
+

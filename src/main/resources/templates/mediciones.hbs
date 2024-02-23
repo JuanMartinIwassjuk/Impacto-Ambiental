@@ -1,0 +1,71 @@
+﻿{{#partial "contenido"}}
+ <link rel="stylesheet" type="text/css" href="/register.css">
+<section class="formMedicion">  
+<form id="fmed"  action="/medicion" method="POST" >
+    <h4>Registrar Medicion:</h4>
+
+    <hr>
+    <h6>Tipo De Consumo:</h6>
+    <select form="fmed" name="FuenteEnergetica" >
+        <option selected value="GAS">GAS</option>
+        <option value="GASOIL">GASOIL</option>
+        <option value="NAFTA">NAFTA</option>
+        <option value="CARBON">CARBON</option>
+        <option value="GASOIL_CONSUMIDO">GASOIL_CONSUMIDO</option>
+        <option value="NAFTA_CONSUMIDA">NAFTA_CONSUMIDA</option>
+        <option value="ELECTRICIDAD">ELECTRICIDAD</option>
+        <option value="TRANSPORTE">TRANSPORTE</option>
+        <option value="DISTANCIA">DISTANCIA</option>
+         </select>
+    <br>
+    <hr>
+    <br>
+    <h6>Unidad De Medida:</h6>
+    <select form="fmed" name="unidadMedida">
+        <option value="METROS_CUBICOS">METROS_CUBICOS</option>
+        <option value="LITROS">LITROS</option>
+        <option value="KILOGRAMO">KILOGRAMO</option>
+        <option value="KILOWATT_HORA">KILOWATT_HORA</option>
+        <option selected value="KILOMETRO">KILOMETRO</option>
+    
+    </select> 
+ 
+    <br>
+     <hr>
+     <br>
+
+
+
+  <h6>Perioricidad:</h6>
+    <select form="fmed" name="Perioricidad">
+        <option value="ANUAL">Anual</option>
+        <option value="MENSUAL">Mensual</option>
+    </select> 
+    <br>
+    <hr>
+  
+    <input class="controles" name="valor" id="valor"  type="text" placeholder="valor"> </input>
+     <br>
+    
+    <input class="controles" name="mes" id="mes"  type="text" placeholder="mes"> </input>
+     <br>
+  
+    <input class="controles" name="año" id="año" type="text" placeholder="año"> </input>
+     <br>
+     <hr>
+    
+    
+    <button id="botonMedicion" type="submit">Enviar</button>
+    <br>
+
+  </form>
+    <br>
+    <br>   
+<form id="fmedar" action="/medicion/altaarchivo" method="POST" enctype="multipart/form-data" >
+    <p>Subir Archivo de medicion (opcional)</p>
+     <input  class="controles" id="archivoCsv" name="archivoCsv"  type="file" placeholder="ArchivoMedicion" accept=".doc,.docx"> </input>
+   <button id="botonarch" type="submit">Enviar Archivo</button>
+    </form>
+  </section> 
+    {{/partial}}
+      {{>layout.html.hbs}}

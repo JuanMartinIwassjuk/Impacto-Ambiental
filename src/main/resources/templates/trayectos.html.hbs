@@ -1,0 +1,38 @@
+﻿{{#partial "contenido"}}
+  <link rel="stylesheet" type="text/css" href="/vincular.css">
+
+  <section class="section-formulario">
+  <h2 class="nombre-org">Trayectos:</h2>
+  {{#if  perteneceOrganizacion}}
+    <a class="buttonref" href="/trayectos/nuevo" >Agregar trayecto</a>
+<br>
+<br>
+  {{else}}
+    <h2>Unite a alguna organización para poder visualizar y cargar trayectos!</h2>
+  {{/if}}
+
+    {{#trayectos}}
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Descripcion:
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              {{descripcion}}
+            </td>
+            <td>
+              <a class="buttonref" href="/trayectos/{{id}}/tramos/nuevo">Añadir tramo</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    {{/trayectos}}
+  </section>
+{{/partial}}
+{{>layout.html.hbs}}

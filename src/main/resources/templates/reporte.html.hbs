@@ -1,0 +1,46 @@
+{{#partial "contenido"}}
+  <link rel="stylesheet" type="text/css" href="/iniciarSesion.css">
+
+<section id ="reporte_section">
+  <h2 id="tituloReporte"> Reporte del total de Huella de carbono por Organizacion: </h2>
+
+  <strong><h2 class="titulosTipoOrg"> Empresas: </h2> </strong>
+  {{#orgEmpresa}}
+    <h4 class="titulosTipoOrg"> {{razonSocial}}:</h4>
+{{#each consumosPropios}}
+
+  <li> {{valor}} | {{unidad}} | {{periodicidads}} | {{fe}} | {{mes}}/{{anio}} </li>
+{{/each}}
+  {{/orgEmpresa}}
+  
+    <strong><h2 class="titulosTipoOrg"> Instituciones: </h2> </strong>
+ {{#orgInstitucion}}
+   <h4 class="titulosTipoOrg"> {{razonSocial}}:</h4>
+{{#each consumosPropios}}
+
+  <li> {{valor}} | {{unidad}} | {{periodicidads}} | {{fe}} | {{mes}}/{{anio}} </li>
+{{/each}}
+  {{/orgInstitucion}}
+    <strong><h2 class="titulosTipoOrg"> Ongs: </h2> </strong>
+{{#orgOng}}
+  <h4 class="titulosTipoOrg"> {{razonSocial}}:</h4>
+{{#each consumosPropios}}
+  <li> {{valor}} | {{unidad}} | {{periodicidads}} | {{fe}} | {{mes}}/{{anio}} </li>
+{{/each}}
+  {{/orgOng}}
+
+    <strong><h2 class="titulosTipoOrg"> Gubernamentales: </h2> </strong>
+{{#orgGubernamental}}
+
+  <h4 class="titulosTipoOrg"> {{razonSocial}}:</h4>
+{{#each consumosPropios}}
+
+  <li> {{valor}} | {{unidad}} | {{periodicidads}} | {{fe}} | {{mes}}/{{anio}} </li>
+{{/each}}
+  {{/orgGubernamental}}
+  
+  
+</section>
+{{/partial}}
+{{>layout.html.hbs}}
+    

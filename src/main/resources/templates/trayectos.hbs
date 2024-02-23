@@ -1,0 +1,12 @@
+{{#partial "contenido"}}
+   <link rel="stylesheet" type="text/css" href="/trayectos.css">
+  
+  {{#each trayectos}}
+ <h5>Trayectos: </h5>
+    {{#each tramos:}}
+    <li> </li>  
+    {{/each}}
+  
+  {{/each}}
+{{/partial}}
+{{>layout.html.hbs}}

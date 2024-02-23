@@ -1,0 +1,32 @@
+{{#partial "contenido"}}
+<link rel="stylesheet" type="text/css" href="/vincular.css">
+ <br>
+ <h2 id="tituloPropuestas">Nuestras propuestas de vinculacion:</h2>
+ <div id="propuestasVinculacion">
+ {{#each vinculaciones}}
+ <h5>Nombre,Apellido y Documento: </h5>
+ <li> {{nombre}} | {{apellido}} | {{nroDocumento}}</li>
+ <h5>Motivaciones: </h5>
+
+ <p id="motivoParrafo" >{{motivo}}</p>
+ <hr id="linea">
+  {{/each}}
+    <form  action="/vinculacionesarechazar" method="POST" id="orgRechazar">
+   <label for="docRechazado">RECHAZAR</label>
+       <input name="docRechazado" id="docRechazado" class="controls" type="text" placeholder="Insertar Dni"> </input>
+        <br>
+    <button class="boton" type="submit">Enviar</button>
+  
+  
+  
+  </form>
+  <br>
+  <ul>
+ <li><a href="/vinculaciones" > Volver a mis propuestas</a></li>
+ <li><a href="/vinculacionesaaceptar" > Aceptar propuestas</a></li>
+ </ul>
+  
+  </form>
+ </div>
+{{/partial}}
+{{>layout.html.hbs}}

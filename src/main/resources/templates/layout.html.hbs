@@ -1,0 +1,48 @@
+<!DOCTYPE htlm>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <title>Nuestro Impacto Ambiental</title>
+</head>
+<body >
+  <h1>Nuestro Impacto Ambiental</h1>
+    <nav>
+        <ul>
+
+        <li><a href="/"  id="inicio" class="requerimiento"> Menu Inicio</a></li>
+            {{#if  RolOrganizacion}}
+                <li><a href="/organizacion/miembros"  id="inicio" class="requerimiento"> Mis Miembros</a></li>
+                <li><a href="/medicion"  id="inicio" class="requerimiento"> Alta Mediciones</a></li>
+                <li><a href="/mediciones"  id="inicio" class="requerimiento"> Mis Mediciones</a></li>
+                <li><a href="/vinculaciones"  id="inicio" class="requerimiento"> Mis Propuestas de Vinculacion</a></li>
+            {{else}}
+            {{/if}}
+
+            {{#if  RolMiembro}}
+                <li><a href="/oportunidades"  id="inicio" class="requerimiento"> Quiero vincularme a Organizacion</a></li>
+                <li><a href="/trayectos"  id="inicio" class="requerimiento">Trayectos</a></li>
+            {{else}}
+            {{/if}}
+
+            {{#if SesionIniciada}}
+            <li><a href="/recomendaciones"  id="inicio" class="requerimiento"> Recomendaciones</a></li>
+            <li><a href="/calculohc"  id="inicio" class="requerimiento"> Huella de Carbono</a></li>
+            <li><a href="/reportesconsumo"  id="inicio" class="requerimiento"> Reportes de Consumo</a></li>
+            {{else}}
+            <li><a id="anclaSesion" href="/iniciarsesion"  id="inicio" class="requerimiento"> Iniciar Sesion</a></li>
+            <li><a href="/registro"  id="inicio" class="requerimiento"> Crear una cuenta</a></li>
+            {{/if}}
+
+        </ul>
+    </nav>
+  {{#block "contenido"}}
+  {{/block}}
+    <footer>
+        <h2>Contactanos!: </h2>
+        <p ><strong>Instagram</strong>: @NuestroImpactoAmbiental_912</p>
+        <p ><strong>Mail</strong>: NuestroImpactoAmbiental@gmail.com</p>
+        <p ><strong>Telefono</strong>: 474787812</p>
+<br>
+    </footer>
+</body>
+</html>

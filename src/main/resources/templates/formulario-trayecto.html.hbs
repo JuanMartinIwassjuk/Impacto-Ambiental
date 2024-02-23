@@ -1,0 +1,21 @@
+{{#partial "contenido"}}
+<link rel="stylesheet" type="text/css" href="/register.css">
+  <section class="section-formulario">
+    <h2>Registro de trayecto:</h2>
+    <br>
+    <p>Ingresar una descripcion del trayecto y documentos de los <strong>miembros</strong> del mismo:</p>
+    <br>
+    <form class="formulario-vinculacion" action="/trayectos" method="POST">
+      <div class="form-input">
+      
+        <input name="descripcion" class="controls" type="text" placeholder="descripcion" required>
+      </div>
+      <div class="form-input">
+        
+        <input name="documentos" class="controls" type="text" placeholder="472347,753413,854421">
+      </div>
+      <button class="boton" type="submit">Crear trayecto</button>
+    </form>
+  </section>
+{{/partial}}
+{{>layout.html.hbs}}

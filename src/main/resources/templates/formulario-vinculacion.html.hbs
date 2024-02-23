@@ -1,0 +1,28 @@
+{{#partial "contenido"}}
+<link rel="stylesheet" type="text/css" href="/register.css">
+  
+<section class="section-formulario">
+    <h2>Ingresa tus datos para solicitar vincularte</h2>
+    <br>
+    <form class="formulario-vinculacion" action="/organizaciones/{{idOrg}}/areas/{{idArea}}/vinculaciones/solicitud" method="POST">
+    <div class="form-input">
+
+    <br>
+      <input name="nombre" class="controls" type="text" placeholder="Nombre" required>
+    </div>
+
+    <div class="form-input">
+    <br>
+      <input name="apellido" class="controls" type="text" placeholder="Apellido" required>
+    </div>
+
+    <div class="form-input">
+    <br>
+      <input name="motivo" class="controls" type="text" placeholder="Motivaciones para vincularte">
+    </div>
+
+    <button class="boton" type="submit">Solicitar</button>
+    </form>
+  </section>
+{{/partial}}
+{{>layout.html.hbs}}

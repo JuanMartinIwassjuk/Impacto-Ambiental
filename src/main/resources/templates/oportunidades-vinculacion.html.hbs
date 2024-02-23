@@ -1,0 +1,28 @@
+{{#partial "contenido"}}
+  <link rel="stylesheet" type="text/css" href="/vincular.css">
+  <section class="section-formulario">
+    {{#organizaciones}}
+      <h2 class="nombre-org">{{razonSocial}}</h2>
+    {{#each areas}}
+      <table>
+        <thead>
+          <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              {{nombre}}
+            </td>
+            <td>
+              <a class="buttonref" href="/organizaciones/{{../id}}/areas/{{id}}/vinculaciones/solicitud/nueva" >Quiero unirme</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    {{/each}}
+    {{/organizaciones}}
+  </section>
+{{/partial}}
+{{>layout.html.hbs}}
+    

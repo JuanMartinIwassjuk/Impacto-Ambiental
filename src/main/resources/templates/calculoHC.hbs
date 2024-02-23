@@ -1,0 +1,40 @@
+   
+      {{#partial "contenido"}}
+      <div id="calcular">
+  <link rel="stylesheet" type="text/css" href="/iniciarSesion.css">
+    
+      
+    {{#if  SeccionCalculo}}
+    <section id="sessionCalculoo">
+    <br>
+  
+   
+     <h2 class="tituloHC">Huella De Carbono Anual:</h2>
+     <br>
+     <strong><p id="valorDeLahc">{{HuellaCarbonoAnual}} KgCo2  <p></strong>
+    <h2 class="tituloHC">Huella De Carbono Mensual:</h2>
+     <br>
+     <strong><p id="valorDeLahca">{{HuellaCarbonoMensual}} KgCo2  <p></strong>
+    </section>
+   
+    {{else}}
+     <br>
+      <br>
+     <section id="idCalculo">
+   <br>
+    <br>
+ <h2 class="tituloHC">Calcular Huella De Carbono:</h2>
+ 
+  <form  action="/calculohc" method="POST" id="calculohc">
+     
+     <button class="botonFachero" type="submit">Calcular</button>
+
+      </form>
+    </div>
+ 
+  {{/if}}
+       </section>
+      {{/partial}}
+      {{>layout.html.hbs}}
+    
+

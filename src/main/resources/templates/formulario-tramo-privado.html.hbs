@@ -1,0 +1,91 @@
+{{#partial "contenido"}}
+<link rel="stylesheet" type="text/css" href="/register.css">
+
+ <section class="formMedicion">  
+    <form id="form_tramo"  action="/tramo" method="POST">
+  <h2 id="titulort">Registro de tramo:</h2>
+
+     <h6>Origen:</h6>
+     <input name="localidadorigen" class="controls" type="text" placeholder="Localidad" required>
+     <input name="calleorigen" class="controls" type="text" placeholder="Calle" required>
+     <input name="alturaorigen" class="controls" type="text" placeholder="Altura" required>
+
+      <hr>
+      <h6>Destino:</h6>
+     <input name="localidaddestino" class="controls" type="text" placeholder="Localidad" required>
+     <input name="calledestino" class="controls" type="text" placeholder="Calle" required>
+     <input name="alturadestino" class="controls" type="text" placeholder="Altura" required>
+  
+      <hr>
+      <h6>Medio de Transporte:</h6>
+ 
+      <p>Tipo Transporte Contratado o Tipo de Vehiculo (elegir alguno de los 2)</p>
+          <select  name="tipoTransporteContratado">
+        <option value="UBER">UBER</option>
+        <option value="REMIS">REMIS</option>
+        <option value="CABIFY">CABIFY</option>
+        <option value="TAXI">TAXI</option>
+    </select>
+
+        <select  name="tipoVehiculo">
+        <option value="MOTO">MOTO</option>
+        <option value="AUTO">AUTO</option>
+        <option value="CAMIONETA">CAMIONETA</option>
+    </select>
+
+      <input name="litrosCombustiblePorKm" class="controls" type="text" placeholder="litrosCombustiblePorKm" required>
+
+      <h6>Tipo Combustible:</h6>
+        <select selected name="tipoCombustible">
+        <option value="GNC">GNC</option>
+        <option value="NAFTA">NAFTA</option>
+        <option value="ELECTRICO">ELECTRICO</option>
+        <option value="GASOIL">GASOIL</option>
+    </select>
+    <hr>
+
+    <h6>Tipo de Consumo:</h6>
+    <hr>
+    <h6>Fuente Energetica:</h6>
+        <select name="FuenteEnergetica">
+        <option selected value="GAS">GAS</option>
+        <option value="GASOIL">GASOIL</option>
+        <option value="NAFTA">NAFTA</option>
+        <option value="CARBON">CARBON</option>
+        <option value="GASOIL_CONSUMIDO">GASOIL_CONSUMIDO</option>
+        <option value="NAFTA_CONSUMIDA">NAFTA_CONSUMIDA</option>
+        <option value="ELECTRICIDAD">ELECTRICIDAD</option>
+        <option value="TRANSPORTE">TRANSPORTE</option>
+        <option value="DISTANCIA">DISTANCIA</option>
+         </select>
+   
+       <h6>Factor Emision:</h6>
+  
+         <input name="valorFe" class="controls" type="text" placeholder="valorFe" required>
+  
+         <select name="unidadMedida">
+        <option value="METROS_CUBICOS">METROS_CUBICOS</option>
+        <option value="LITROS">LITROS</option>
+        <option value="KILOGRAMO">KILOGRAMO</option>
+        <option value="KILOWATT_HORA">KILOWATT_HORA</option>
+        <option selected value="KILOMETRO">KILOMETRO</option>
+    
+    </select>
+      <h6>Equvalencia:</h6>
+    <select name="equivalencia">
+        <option value="GRAMO_CO2_EQ">GRAMO_CO2_EQ</option>
+        <option value="KILOGRAMO_CO2_EQ">KILOGRAMO_CO2_EQ</option>
+        <option value="TN_CO2_EQ">TN_CO2_EQ</option>
+    </select> 
+
+
+
+   
+    
+      <button class="boton" type="submit">Crear Tramo</button>
+    </form>
+     
+     <li><a href="/" > Registrar Trayecto</a></li>
+  </section>
+{{/partial}}
+{{>layout.html.hbs}}

@@ -1,0 +1,25 @@
+{{#partial "contenido"}}
+<link rel="stylesheet" type="text/css" href="/vincular.css">
+ <br>
+
+ <h2 id="tituloPropuestas">Nuestras propuestas de vinculacion:</h2>
+ <div id="propuestasVinculacion">
+    {{#each vinculaciones}}
+    <h5>Nombre,Apellido y Documento: </h5>
+ <li> {{nombre}} | {{apellido}} | {{nroDocumento}}</li>
+ <h5>Motivaciones: </h5>
+ <p id="motivoParrafo" >{{motivo}}</p>
+ <hr id="linea">
+    {{/each}}
+  <br>
+   <li><a href="/vinculacionesaaceptar"  class="requerimiento">Click para aceptar vinculaciones:</a></li>
+ 
+  <br>
+
+   <li><a href="/vinculacionesarechazar"  >Click para rechazar vinculaciones:</a></li>
+   <br>
+  
+ </div>
+{{/partial}}
+{{>layout.html.hbs}}
+    

@@ -1,0 +1,22 @@
+  {{#partial "contenido"}}
+  <link rel="stylesheet" type="text/css" href="/register.css">
+    <form id="login">
+        <h4>Crear nueva cuenta</h4>
+        <input class="controls" type="text" placeholder="User"> </input>
+        <br>
+        <br>
+        <input class="controls" type="text" placeholder="Password"> </input>
+         <input class="controls" type="text" placeholder="Repeat Password"> </input>
+        <br>
+        <br>
+        <p> Rol:</p>
+        <label class="roless" for="rol_org"><input id="rol_org" type="radio" name="roles">Organizacion</input></label>
+        <label class="roless" for="rol_user"><input id="rol_user" type="radio" name="roles">Miembro</input></label>
+        <button class="boton" type="submit">Enviar</button>
+
+      </form>
+  
+  
+  
+    {{/partial}}
+      {{>layout.html.hbs}}

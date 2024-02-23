@@ -1,0 +1,13 @@
+{{#partial "contenido"}}
+  <link rel="stylesheet" type="text/css" href="/vincular.css">
+<br>
+ <h2 id="tituloMediciones">Mis Mediciones:</h2>
+ <div id="medicionesDiv">
+  <h5>Valor, Perioricidad, FuenteEnergetica y fecha: </h5>
+{{#each consumos}}
+ <li> {{valor}} | {{unidad}} | {{periodicidads}} | {{fe}} | {{mes}}/{{anio}} </li>
+{{/each}}
+</div>
+
+{{/partial}}
+{{>layout.html.hbs}}
